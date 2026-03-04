@@ -196,7 +196,14 @@ export default function(hljs) {
       hljs.COMMENT('/\\*', '\\*/', { contains: [ 'self' ] }),
       hljs.inherit(hljs.QUOTE_STRING_MODE, {
         begin: /b?"/,
-        illegal: null
+        illegal: null,
+        contains: [
+          hljs.BACKSLASH_ESCAPE,
+          {
+            scope: "char.escape",
+            match: /\\(\"|\\|\d{3}|x[\da-fA-F]{2}|u[\da-fA-F]{4}|U[\da-fA-F]{8})/
+          }
+        ]
       }),
       {
         className: 'symbol',
