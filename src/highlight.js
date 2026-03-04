@@ -747,13 +747,15 @@ const HLJS = function(hljs) {
 
     if (shouldNotHighlight(language)) return;
 
-    fire("before:highlightElement",
-      { el: element, language });
-
+    // Skip already highlighted elements BEFORE checking for unescaped HTML
+    // to avoid false positive security warnings on re-highlighting
     if (element.dataset.highlighted) {
       console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", element);
       return;
     }
+
+    fire("before:highlightElement",
+      { el: element, language });
 
     // we should be all text, no child nodes (unescaped HTML) - this is possibly
     // an HTML injection attack - it's likely too late if this is already in
