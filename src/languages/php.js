@@ -1,5 +1,6 @@
 /*
 Language: PHP
+Description: Choose this for any PHP code, with the opening tag or not.
 Author: Victor Karamzin <Victor.Karamzin@enterra-inc.com>
 Contributors: Evgeny Stepanischev <imbolk@gmail.com>, Ivan Sagalaev <maniac@softwaremaniacs.org>
 Website: https://www.php.net

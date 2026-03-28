@@ -1,5 +1,6 @@
 /*
 Language: PHP Template
+Description: Choose this for PHP code with a required opening tag (<?php).
 Requires: xml.js, php.js
 Author: Josh Goebel <hello@joshgoebel.com>
 Website: https://www.php.net
