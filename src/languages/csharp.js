@@ -164,9 +164,9 @@ export default function(hljs) {
   const NUMBERS = {
     className: 'number',
     variants: [
-      { begin: '\\b(0b[01\']+)' },
-      { begin: '(-?)\\b([\\d\']+(\\.[\\d\']*)?|\\.[\\d\']+)(u|U|l|L|ul|UL|f|F|b|B)' },
-      { begin: '(-?)(\\b0[xX][a-fA-F0-9\'_]+|(\\b[\\d\'_]+(\\.[\\d\'_]*)?|\\.[\\d\'_]+)([eE][-+]?[\\d\'_]+)?)' }
+      { begin: '\\b(0b[01_]+)' },
+      { begin: '(-?)\\b([\\d_]+(\\.[\\d_]*)?|\\.[\\d_]+)(u|U|l|L|ul|UL|f|F|b|B)' },
+      { begin: '(-?)(\\b0[xX][a-fA-F0-9_]+|(\\b[\\d_]+(\\.[\\d_]*)?|\\.[\\d_]+)([eE][-+]?[\\d_]+)?)' }
     ],
     relevance: 0
   };
